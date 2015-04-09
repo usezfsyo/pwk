@@ -1,5 +1,5 @@
 echo strUrl = WScript.Arguments.Item(0) > wget.vbs
-echo StrFile = Wscript.Arguments.Item(1) >> wget.vbs
+echo StrFile = WScript.Arguments.Item(1) >> wget.vbs
 echo Const HTTPREQUEST_PROXYSETTING_DEFAULT = 0 >> wget.vbs
 echo Const HTTPREQUEST_PROXYSETTING_PRECONFIG = 0 >> wget.vbs
 echo Const HTTPREQUEST_PROXYSETTING_DIRECT = 1 >> wget.vbs
@@ -20,6 +20,7 @@ echo  Set ts = fs.CreateTextFile(StrFile, True) >> wget.vbs
 echo  strData = "" >> wget.vbs
 echo  strBuffer = "" >> wget.vbs
 echo  For lngCounter = 0 to UBound(varByteArray) >> wget.vbs
-echo  ts.Write Char(255 and Ascb(Midb(varByteArray,lngCounter + 1, 1))) >> wget.vbs
+echo  ts.Write Chr(255 and Ascb(Midb(varByteArray,lngCounter + 1, 1))) >> wget.vbs
 echo  Next >> wget.vbs
 echo  tx.Close >> wget.vbs
+
